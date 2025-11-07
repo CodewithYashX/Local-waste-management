@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Report Illegal Dumping</title>
+<style>
+body { font-family: Arial; margin: 2rem; background:#f8fff8; }
+h2 { color:#2e8b57; }
+form { max-width:500px; margin:auto; display:flex; flex-direction:column; }
+input, textarea, button { margin-top:10px; padding:10px; border-radius:5px; border:1px solid #ccc; }
+button { background:#2e8b57; color:white; border:none; cursor:pointer; }
+button:hover { background:#267047; }
+</style>
+</head>
+<body>
+<h2>Report Illegal Dumping</h2>
+<form onsubmit="alert('Thank you for reporting! Our team will investigate.'); return false;">
+  <label>Location:</label>
+  <input type="text" placeholder="Enter address" required>
+  <label>Details:</label>
+  <textarea rows="4" placeholder="Describe the issue..." required></textarea>
+  <label>Attach Photo (optional):</label>
+  <input type="file" accept="image/*">
+  <button type="submit">Submit Report</button>
+</form>
+</body>
+</html>

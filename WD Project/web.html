@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Waste Management</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #f4faf4;
+      color: #333;
+    }
+
+    /* Welcome Page */
+    .welcome-page {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+      color: white;
+      text-align: center;
+    }
+
+    .welcome-page h1 {
+      font-size: 3rem;
+      background: rgba(0, 100, 0, 0.7);
+      padding: 20px 40px;
+      border-radius: 10px;
+    }
+
+    .enter-btn {
+      margin-top: 30px;
+      background-color: #3cb371;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .enter-btn:hover {
+      background-color: #2e8b57;
+    }
+
+    /* Menu Page */
+    .menu-page {
+      display: none;
+      text-align: center;
+      padding: 4rem 1rem;
+    }
+
+    .menu-page h2 {
+      color: #2e8b57;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .options {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .option-card {
+      background: white;
+      width: 250px;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .option-card:hover {
+      transform: scale(1.05);
+    }
+
+    .option-card img {
+      width: 100%;
+      border-radius: 10px;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .option-card h3 {
+      margin-top: 10px;
+      color: #2e8b57;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #2e8b57;
+      color: white;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Welcome Screen -->
+  <div class="welcome-page" id="welcome">
+    <h1>Welcome to Local Waste Management</h1>
+    <button class="enter-btn" onclick="showMenu()">Enter</button>
+  </div>
+
+  <!-- Menu Screen -->
+  <div class="menu-page" id="menu">
+    <h2>What would you like to do?</h2>
+    <div class="options">
+      <div class="option-card" onclick="openInNewTab('schedule.html')">
+        <img src="https://images.unsplash.com/photo-1556767576-5ec41e3239a7?auto=format&fit=crop&w=800&q=80" alt="Garbage Schedule">
+        <h3>View Garbage Collection Schedule</h3>
+      </div>
+
+      <div class="option-card" onclick="openInNewTab('recycling.html')">
+        <img src="https://images.unsplash.com/photo-1599311232804-3e99a936a3e8?auto=format&fit=crop&w=800&q=80" alt="Recycling Centers">
+        <h3>Find Recycling Centers</h3>
+      </div>
+
+      <div class="option-card" onclick="openInNewTab('report.html')">
+        <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=800&q=80" alt="Report Dumping">
+        <h3>Report Illegal Dumping</h3>
+      </div>
+
+      <div class="option-card" onclick="openInNewTab('tips.html')">
+        <img src="https://images.unsplash.com/photo-1606761568499-6b8b1f9b8a57?auto=format&fit=crop&w=800&q=80" alt="Eco Tips">
+        <h3>Eco-Friendly Living Tips</h3>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Local Waste Management | Keeping Our City Clean & Green</p>
+  </footer>
+
+  <script>
+    function showMenu() {
+      document.getElementById('welcome').style.display = 'none';
+      document.getElementById('menu').style.display = 'block';
+    }
+    function openInNewTab(url) {
+      window.open(url, '_blank');
+    }
+  </script>
+
+</body>
+</html>
